@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Booking Form</title>
+
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" href="assets/plugins/slider/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/plugins/slider/css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+		<style>
+        body {
+            font-family: Arial;
+        }
+
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: dodgerblue;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: darkblue;
+        }
+
+        .form-container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+			.date-input[type=date],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+
+<body>
+    
+<!-- ################# Header Starts Here#######################--->
+    <header>
+   <div id="nav-head" class="header-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 nav-img">
+                      <p>&nbsp;</p>
+                      <p>company Logo<a data-toggle="collapse" data-target="#menu" href="#menu"><i class="fas d-block d-md-none small-menu fa-bars"></i></a></p>
+                    </div>
+                    <div id="menu" class="col-md-9 d-none d-md-block nav-item">
+                        <ul>
+                            <li><a href="front page.html">Home</a></li>
+                            <li><a href="about_us.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="booking.html">Booking</a></li>
+                            <li><a href="contact_us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+      </div>
+    </header>
+  
+  
+<!--  ************************* Page Title Starts Here ************************** -->
+               <div class="page-nav no-margin row">
+                   <div class="container">
+                       <div class="row">
+                           <h2>Booking </h2>
+                           <ul>
+                               <li> <a href="front page.html"><i class="fas fa-home"></i> Home</a></li>
+                               <li><i class="fas fa-angle-double-right"></i> Booking </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+       
+    <!-- ######## Page  Title End ####### -->
+       
+       
+<!--// booking form start here-->
+    <div class="container form-container">
+ <h3 align="center">Booking Form</h3>
+    <p align="center">Please Insert Your Information</p>
+		<form action="savebooking.php" method="post" onsubmit="return validateForm()">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" required="required" data-error="Your first name is required." placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+			
+			<label for="lname">Mobile Phone</label>
+            <input type="text" id="phononum" name="phonenum" required="required" data-error="Your Phone Number is required." placeholder="Your Phone Number..">
+			
+			<label for="lname">IC Number</label>
+            <input type="text" id="idnum" name="idnum" required="required" data-error="Your IC Number is required." placeholder="Your IC Number..">
+			
+			 <label for="homeadd">Address</label>
+            <input type="text" id="homeadd" name="homeadd" required="required" data-error="Your Address is required." placeholder="Your Adress..">
+
+            <label for="services">Clean Services</label>
+            <select id="services" required="required" data-error="This section is required." name="services">
+				<option selected disabled>---Choose Service---</option>
+                <option value="Home Cleaning">Home Cleannig</option>
+                <option value="Post Renovation Cleaning Service">Post Renovation Cleaning Service</option>
+                <option value="Part Time Maid">Part Time Maid Service</option>
+				<option value="Office Cleaning">Office Cleaning</option>
+            </select>
+			
+			<label for="date"><br>Date<br>
+			</label>
+  			<input type="date" required="required" id="daycleaning" name="daycleaning">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+        
+<!---################# Footer Starts Here#######################--->
+
+
+<footer class="footer">
+        <div class="container">
+            <div class="row">
+               <div class="col-md-4 col-sm-12 map-img">
+                    <h2>Contact Us</h2>
+                    <address class="md-margin-bottom-40">
+                       A-6-01,Sri Pandan Condominium, <br>
+                       	Taman Pandan Mewah, <br>
+                        68000 Ampang,Selangor <br>
+                        Phone: +1 831 143 556 <br>
+                        Email: <a href="mailto:kl2304013520@student.uptm.edu.my" class="">info@cleaningservicemalaysia.in</a><br>
+                        
+                    </address>
+
+                </div>
+            </div>
+        </div>
+        
+
+    </footer>
+   
+</body>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/plugins/slider/js/owl.carousel.min.js"></script>
+<script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+
+<script src="assets/js/script.js"></script>
+
+
+   
+</html>
